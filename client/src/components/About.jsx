@@ -24,18 +24,16 @@ const About = () => {
           >
             <ul className="p-6 text-justify list-disc pl-10">
               <li>
-                Trustme is a trusted datasets marketplace built on ethereum and
-                uses filecoin at core for nft and file storage.{" "}
+                CampusCrate is a trusted Decentralized Autonomous Organisation built on filecoin.{" "}
               </li>
-              <li>Get trusted datasets from verified sources in seconds.</li>
-              <li>
-                Did not get the dataset what was claimed to be, apply for verify
-                by our DAO.
+              <li>Implemented a two-tiered DAO for better governance efficiency. At higher level Quadratic voting ensures fairness for grant and funding decisions, while a lower tier meets internal college/university needs.
               </li>
-              <li>Get your dataset verified by our DAO and get rewarded.</li>
               <li>
-                Get a large variety of datasets from a large pool of verified
-                sources.
+                Encouraging environment for college DAOs to develop new projects for ecosystem.
+              </li>
+              <li>NFTs for leaders to join the DAO</li>
+              <li>
+                Tokens alloted to each DAO every year for voting and governance.
               </li>
             </ul>
           </div>
