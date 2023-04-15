@@ -1,11 +1,11 @@
 import "./styles/Home.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Dashboard, HomePage } from "./pages";
-import { Layout, VerticalNav, NavBar } from "./components";
+import { Layout, VerticalNav} from "./components";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={
@@ -15,8 +15,7 @@ export default function Home() {
           } />
           <Route path="/dashboard" element={
             <>
-              <NavBar />
-              <VerticalNav>
+              <VerticalNav name={'Dashboard'}>
                 <Dashboard />
               </VerticalNav>
             </>
