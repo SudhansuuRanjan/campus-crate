@@ -1,8 +1,4 @@
 import { FaEthereum } from "react-icons/fa";
-import { BsFillCheckSquareFill } from "react-icons/bs";
-import { Heading } from "./Heading";
-
-
 
 const Header = () => {
 
@@ -10,7 +6,7 @@ const Header = () => {
         console.log("clicked");
     }
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       <h1 className="font-bold lg:text-8xl md:text-7xl text-6xl text-center lg:my-20 md:my-16 my-16 mb-10 flex items-center justify-center flex-wrap gap-5 m-auto  max-w-[80%]">
         <div className="text-transparent bg-gradient-to-r bg-clip-text from-blue-600  to-pink-600  flex">
           Accelerate your{" "}
@@ -19,7 +15,7 @@ const Header = () => {
           Blockchain Club{" "}
         </div>
         <div className="text-transparent bg-gradient-to-r bg-clip-text from-yellow-500 to-red-600  flex">
-          With CampusCrate
+          with CampusCrate
         </div>
       </h1>
 
