@@ -4,11 +4,11 @@ import { Heading } from './Heading'
 const Features2 = () => {
   return (
     <section className="bg-gray-100 dark:bg-[#10111f] py-[4rem] mt-[5rem]">
-        <Heading src="/images/tech-head.png" />
+        <Heading src="/images/CampusCrate.svg" />
         <div data-aos="fade-up" className="max-w-md text-center m-auto">
           <p>
-            Trustme uses decentralized network for hosting files and a DAO based
-            system for verifying datasets.
+            CampusCrate uses decentralized network for ecosystem and a DAO based
+            system for clubs to develop projects.
           </p>
         </div>
 

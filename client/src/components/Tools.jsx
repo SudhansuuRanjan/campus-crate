@@ -28,10 +28,10 @@ const Tools = () => {
               className="flex items-center bg-gray-100 dark:bg-[#10111f] border-2 rounded-3xl w-[85%] md:w-[20rem] lg:w-[24rem] border-[#2F304E] m-[auto]"
             >
               <div className="p-2 px-4 pr-6">
-                <img src="/images/Graph.png" height="50" width="50" alt="gps" />
+                <img src="/images/DAo.png" height="50" width="50" alt="gps" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold">Secure and Trusted</h1>
+                <h1 className="text-2xl font-bold">As DAO</h1>
               </div>
             </div>
 
@@ -43,7 +43,7 @@ const Tools = () => {
                 <img src="/images/GPS.png" height="50" width="50" alt="gps" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold">DAO based</h1>
+                <h1 className="text-2xl font-bold">For Students</h1>
               </div>
             </div>
 
@@ -55,7 +55,7 @@ const Tools = () => {
                 <img src="/images/Math.png" height="50" width="50" alt="gps" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold">Decentralized Storage</h1>
+                <h1 className="text-2xl font-bold"> By College Clubs</h1>
               </div>
             </div>
           </div>
@@ -64,21 +64,21 @@ const Tools = () => {
 
       <section className="flex flex-col items-center justify-center mt-20 text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-20 max-w-[85%]">
-          Every dataset on <span className="text-pink-600">CampusCrate</span>
+          Projects on <span className="text-pink-600">CampusCrate</span> are
         </h1>
         <h2 className="flex items-start justify-center gap-4 text-xl lg:text-2xl md:text-2xl pb-3">
           <BsFillCheckSquareFill className="text-green-400 text-xl lg:text-2xl md:text-2xl mt-1" />
-          <p>Verified by our DAO community.</p>
+          <p>Voted by club Leaders.</p>
         </h2>
 
         <h2 className="flex items-start justify-center gap-4 text-xl lg:text-2xl md:text-2xl pb-3">
           <BsFillCheckSquareFill className="text-green-400 text-xl lg:text-2xl md:text-2xl mt-1" />
-          <p>Stored on decentralized platforms.</p>
+          <p>Quadratic voting by leaders and verifiers</p>
         </h2>
 
         <h2 className="flex items-start justify-center gap-4 text-xl lg:text-2xl md:text-2xl pb-3">
           <BsFillCheckSquareFill className="text-green-400 text-xl lg:text-2xl md:text-2xl mt-1" />
-          <p>Claim fraud if the dataset is not per expectation.</p>
+          <p>Grants by Ecosystem verifiers</p>
         </h2>
       </section>
 
