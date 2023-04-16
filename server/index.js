@@ -86,3 +86,5 @@ app.post('/api/create-proposal', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running on port ${port} 🚀 : http://localhost:${port}`);
 });
+
+export default app;
