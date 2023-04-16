@@ -93,6 +93,7 @@ It consists of following scripts:<br>
 9. <strong>create-vote-proposal.js</strong> : With the help of this file, members are given access to create proposals.
 
 <br>
+ 
 
 # Tech Stack Used👨‍💻
 
@@ -180,7 +181,10 @@ The Server Runs on [http://localhost:4000/](http://localhost:4000/)
 <br> 
 <br>
 
-## Visit us 🙌: https://campus-crate.vercel.app/
+## Links 🙌:
+ * website : https://campus-crate.vercel.app/
+ * Youtube : https://youtu.be/lsd5nwyz0uc
+ * Screen Recording : https://app.flonnect.com/view/video/harshktiwary07/Flonnect_2023-04-16_81866baf-3eb9-4fae-81f4-f5d9d40ebaf9 
 
 <br> 
 
