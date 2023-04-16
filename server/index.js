@@ -8,6 +8,7 @@ import deployNFT from './scripts/3-config-nft.js';
 import claimConditions from './scripts/4-set-claim-condition.js';
 import deployToken from './scripts/5-deploy-token.js';
 import generateMoney from './scripts/6-print-money.js';
+import Airdrop from './scripts/7-airdrop-token.js';
 
 const app = express();
 app.use(express.json());
@@ -45,6 +46,15 @@ app.post('/api/deployToken', async (req, res) => {
         });
     } catch (error) {
         res.send("failed to deploy token!");
+    }
+});
+
+app.post('/api/airdrop', async (req, res) => {
+    try {
+        const data = await Airdrop();
+        res.send(data);
+    } catch (error) {
+        res.send("failed to airdrop token!");
     }
 });
 

@@ -1,11 +1,11 @@
 import sdk from "./1-initialize-sdk.js";
 
-(async () => {
+const Airdrop = async () => {
   try {
     // This is the address to our ERC-1155 membership NFT contract.
     const editionDrop = await sdk.getContract("0xEd86a7F9F1F06b597849E9e2807F588bccCd75eB", "edition-drop");
     // This is the address to our ERC-20 token contract.
-    const token = await sdk.getContract("0x6AD3719D3bdAe3a7113d081574dbdb1efD2D75e0", "token");
+    const token = await sdk.getContract("0xBF9a9f4fF3dA3EA6b17C59b04332eDd89b072C0C", "token");
     // Grab all the addresses of people who own our membership NFT, which has 
     // a tokenId of 0.
     const walletAddresses = await editionDrop.history.getAllClaimerAddresses(0);
@@ -35,8 +35,10 @@ import sdk from "./1-initialize-sdk.js";
     // Call transferBatch on all our airdrop targets.
     console.log("🌈 Starting airdrop...");
     await token.transferBatch(airdropTargets);
-    console.log("✅ Successfully airdropped tokens to all the holders of the NFT!");
+    return ("✅ Successfully airdropped tokens to all the holders of the NFT!");
   } catch (err) {
-    console.error("Failed to airdrop tokens", err);
+    return ("Failed to airdrop tokens", err);
   }
-})();
+};
+
+export default Airdrop;
