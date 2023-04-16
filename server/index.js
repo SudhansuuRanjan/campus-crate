@@ -76,7 +76,7 @@ app.post('/api/deployVoteToken', async (req, res) => {
 
 app.post('/api/create-proposal', async (req, res) => {
     try {
-        const data = await createVoteProposal();
+        const data = await createVoteProposal(req.body.description);
         res.send(data);
     } catch (error) {
         res.send("failed to create proposal!");

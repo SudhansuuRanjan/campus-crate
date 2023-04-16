@@ -86,13 +86,14 @@ const Tools = () => {
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center my-20 max-w-[85%]">
           Begin your <span className="text-pink-600">CampusCrate</span> Journey
         </h1>
-        <button
+        <a href="#up">
+          <button
           id="contact"
           className="text-white  bg-gradient-to-r  from-pink-500 to-purple-700 px-[4rem] font-semibold py-[0.7rem] rounded-3xl  hover:from-purple-700 hover:to-pink-500 dark:hover:bg-[#0F1221]  m-auto"
-          onClick={() => handleClick()}
         >
           Connect Wallet
         </button>
+        </a>
       </div>
     </>
   );

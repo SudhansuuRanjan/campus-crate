@@ -26,14 +26,14 @@ const Header = () => {
   const airdrop = async () => {
     try {
       const response = await axios.post("https://campus-crate-production.up.railway.app/api/airdrop");
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <div className="pt-16 relative">
+    <div id="up" className="pt-16 relative">
 
       {airDropping && <div className="fixed top-0 left-0 w-full h-full bg-slate-900 bg-opacity-50 backdrop-blur-md z-[2356123763]">
         <div className="flex items-center justify-center w-full h-full">

@@ -47,7 +47,7 @@ const Dashboard = () => {
           0,
         );
         setMemberAddresses(memberAddresses);
-        console.log('🚀 Members addresses', memberAddresses);
+        // console.log('🚀 Members addresses', memberAddresses);
       } catch (error) {
         console.error('failed to get member list', error);
       }
@@ -65,7 +65,7 @@ const Dashboard = () => {
       try {
         const amounts = await token?.history.getAllHolderBalances();
         setMemberTokenAmounts(amounts);
-        console.log('👜 Amounts', amounts);
+        // console.log('👜 Amounts', amounts);
       } catch (error) {
         console.error('failed to get member balances', error);
       }
