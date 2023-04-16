@@ -2,7 +2,7 @@ require("dotenv").config();
 var port = process.env.PORT || 4000;
 var express = require('express');
 var cors = require('cors');
-// var deployNFTMetadata = require('./scripts/2-deploy-drop.js');
+var deployNFTMetadata = require('./scripts/2-deploy-drop.js');
 // var deployNFT = require('./scripts/3-config-nft.js');
 // var claimConditions = require('./scripts/4-set-claim-condition.js');
 // var deployToken = require('./scripts/5-deploy-token.js');
