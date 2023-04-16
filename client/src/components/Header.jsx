@@ -5,15 +5,17 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Header = () => {
-
   const navigate = useNavigate();
   const address = useAddress();
   const editionDropAddress = "0xEd86a7F9F1F06b597849E9e2807F588bccCd75eB";
-  const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
+  const { contract: editionDrop } = useContract(
+    editionDropAddress,
+    "edition-drop"
+  );
   const { data: nftBalance } = useNFTBalance(editionDrop, address, "0");
 
   const hasClaimedNFT = useMemo(() => {
-    return nftBalance && nftBalance.gt(0)
+    return nftBalance && nftBalance.gt(0);
   }, [nftBalance]);
 
   if (hasClaimedNFT) {
@@ -21,10 +23,13 @@ const Header = () => {
   }
 
   const airdrop = async () => {
-    const { data } = await axios.post("http://localhost:4000/airdrop")
-    console.log(data);
-  }
-
+    try {
+      const response = await axios.post("http://localhost:4000/api/airdrop");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="pt-16">
@@ -42,9 +47,7 @@ const Header = () => {
 
       <p className="text-center font-light lg:text-2xl md:text-2xl text-xl  max-w-[80%] m-auto mt-[-3rem]">
         Easy, one tap access to{" "}
-        <span className="font-bold text-2xl md:text-3xl lg:text-3xl">
-          DAO
-        </span>{" "}
+        <span className="font-bold text-2xl md:text-3xl lg:text-3xl">DAO</span>{" "}
         Blockchain.
       </p>
 
@@ -59,31 +62,34 @@ const Header = () => {
       </div>
 
       <div className="m-auto flex mt-3 flex-col items-center justify-center">
-        {
-          !address ? <ConnectWallet /> :
-            <div className="flex flex-col gap-5 items-center justify-center m-auto">
-              <h1>Mint your free 🍪DAO Membership NFT</h1>
-              <div className="">
-                <Web3Button
-                  contractAddress={editionDropAddress}
-                  action={contract => {
-                    contract.erc1155.claim(0, 1)
-                  }}
-                  onSuccess={async () => {
-                    await airdrop();
-                    console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
-                  }}
-                  onError={error => {
-                    console.error("Failed to mint NFT", error);
-                  }}
-                >
-                  Mint NFT
-                </Web3Button>
-              </div>
+        {!address ? (
+          <ConnectWallet />
+        ) : (
+          <div className="flex flex-col gap-5 items-center justify-center m-auto">
+            <h1>Mint your free 🍪DAO Membership NFT</h1>
+            <div className="">
+              <Web3Button
+                contractAddress={editionDropAddress}
+                action={(contract) => {
+                  contract.erc1155.claim(0, 1);
+                }}
+                onSuccess={async () => {
+                  await airdrop();
+                  console.log(
+                    `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`
+                  );
+                }}
+                onError={(error) => {
+                  console.error("Failed to mint NFT", error);
+                }}
+              >
+                Mint NFT
+              </Web3Button>
             </div>
-        }
+          </div>
+        )}
       </div>
-    </div >
+    </div>
   );
 };
 
