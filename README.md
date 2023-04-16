@@ -103,19 +103,35 @@ QUICKNODE_API_URL = *PROVIDE_QUICKNODE_API*
 
 # Tech-Used👨‍💻
 
-### ThirdWeb SDK
+## ThirdWeb SDK
 Visit https://thirdweb.com to know more.
-### React
+
+## React
 Refer to https://react.dev/ install React
-### TailwindCSS
+
+## TailwindCSS
 Refer to TailwindCSS [docs](https://tailwindcss.com/)
-<br> 
-<br>
-## Visit us 🙌: https://campus-crate.vercel.app/
+
+## Vercel
+Refer to https://vercel.com
+
+
 <br> 
 <br>
 
-## Contributors ✨
+## Visit us 🙌: https://campus-crate.vercel.app/
+
+<br> 
+
+# Challenges Faced🤯
+1. Our team faced a major challenge while attempting to deploy our project on the Filecoin Hyperspace testnet. We encountered an issue with the RPC (Remote Procedure Call) URL, which prevented us from completing the deployment process.
+
+2. We also encountered a challenge with routing while trying to deploy our backend on <strong>Vercel</strong>. Despite trying various solutions, we were unable to resolve the issue. In order to continue with the project, we decided to switch to <strong>Railway</strong> for deployment. 
+
+
+<br>
+
+# Contributors ✨
 
 Team of <em> CampusCrate </em> 💕:
 
