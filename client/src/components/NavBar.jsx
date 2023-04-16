@@ -51,10 +51,10 @@ const NavBar = () => {
               <p className='text-[#e7e8e8] hover:text-purple-600 font-medium  hover:underline'>Dashboard</p>
             </Link>
             <Link to="/dashboard">
-              <p className='text-[#e7e8e8] hover:text-purple-600 font-medium  hover:underline'>Dashboard</p>
+              <p className='text-[#e7e8e8] hover:text-purple-600 font-medium  hover:underline'>Proposals</p>
             </Link>
             <Link to="/dashboard">
-              <p className='text-[#e7e8e8] hover:text-purple-600 font-medium  hover:underline'>Dashboard</p>
+              <p className='text-[#e7e8e8] hover:text-purple-600 font-medium  hover:underline'>Working</p>
             </Link>
           </div>
 

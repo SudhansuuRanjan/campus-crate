@@ -1,12 +1,6 @@
 import { FaEthereum } from "react-icons/fa";
-import {
-  ConnectWallet,
-  Web3Button,
-  useAddress,
-  useContract,
-  useNFTBalance,
-} from "@thirdweb-dev/react";
-import { useEffect, useMemo, useState } from "react";
+import { ConnectWallet, Web3Button, useAddress, useContract, useNFTBalance } from "@thirdweb-dev/react";
+import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 

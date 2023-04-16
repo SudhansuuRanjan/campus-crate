@@ -1,13 +1,13 @@
 import sdk from "./1-initialize-sdk.js";
 
-(async () => {
+const deployVote = async () => {
   try {
     const voteContractAddress = await sdk.deployer.deployVote({
       // Give your governance contract a name.
-      name: "My amazing DAO",
+      name: "CampusCrate DAO",
 
       // This is the location of our governance token, our ERC-20 contract!
-      voting_token_address: "0xa0ea802A259d05645D4B7545be5107fEE32fd980",
+      voting_token_address: "0xBF9a9f4fF3dA3EA6b17C59b04332eDd89b072C0C",
 
       // These parameters are specified in number of blocks. 
       // Assuming block time of around 13.14 seconds (for Ethereum)
@@ -30,11 +30,17 @@ import sdk from "./1-initialize-sdk.js";
       proposal_token_threshold: 0,
     });
 
-    console.log(
-      "✅ Successfully deployed vote contract, address:",
+    return ({
+      message: "✅ Successfully deployed vote contract, address:",
       voteContractAddress,
+    }
     );
   } catch (err) {
-    console.error("Failed to deploy vote contract", err);
+    return ({
+      message: "Failed to deploy vote contract",
+      err
+    });
   }
-})();
+};
+
+export default deployVote;
