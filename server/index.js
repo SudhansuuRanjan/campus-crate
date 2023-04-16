@@ -9,6 +9,9 @@ import claimConditions from './scripts/4-set-claim-condition.js';
 import deployToken from './scripts/5-deploy-token.js';
 import generateMoney from './scripts/6-print-money.js';
 import Airdrop from './scripts/7-airdrop-token.js';
+import deployVote from './scripts/8-deploy-vote.js';
+import setUpVote from './scripts/9-setup-vote.js';
+import createVoteProposal from './scripts/10-create-vote-proposals.js';
 
 const app = express();
 app.use(express.json());
@@ -55,6 +58,28 @@ app.post('/api/airdrop', async (req, res) => {
         res.send(data);
     } catch (error) {
         res.send("failed to airdrop token!");
+    }
+});
+
+app.post('/api/deployVoteToken', async (req, res) => {
+    try {
+        const data = await deployVote();
+        const response = await setUpVote(data.voteContractAddress);
+        res.send({
+            data,
+            response
+        });
+    } catch (error) {
+        res.send("failed to deploy vote!");
+    }
+});
+
+app.post('/api/create-proposal', async (req, res) => {
+    try {
+        const data = await createVoteProposal();
+        res.send(data);
+    } catch (error) {
+        res.send("failed to create proposal!");
     }
 });
 
