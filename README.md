@@ -82,7 +82,7 @@ We have a DAO treasury account which holds over 90% of CampusCrate tokens, with 
 It divided in two part:<strong> Server and client </strong>  
 ## Server
 It consists of following scripts:<br>
-1. <strong>Initialize-sdk.js</strong> : It initialize the thirdWeb SDks.
+1. <strong>Initialize-sdk.js</strong> : It initialize the thirdWeb SDks which we can use to call transactions in other scripts.
 2. <strong>deploy-drop.js</strong> : This scripts is used for metadata creation of CampusCrate membership NFTs. 
 3. <strong>config-nft.js</strong> : Used for deployment of NFTs to the <em>Mumbai Testnet</em>
 4. <strong>set-claim-condition.js</strong> : This script is used for claiming the NFT for membership of DAO. 
@@ -92,30 +92,91 @@ It consists of following scripts:<br>
 8. <strong>setup-vote.js</strong> : This script is used for giving voting access to DAO members only. 
 9. <strong>create-vote-proposal.js</strong> : With the help of this file, members are given access to create proposals.
 
-## Setup .env
-Provide the given variables in <em>.env</em> file.
-```
-PRIVATE_KEY = *REPLACE_WITH_YOUR_PRIVATE_KEY*
-WALLET_ADDRESS = *REPLACE_YOUR_WALLET_ADDRESS*
-QUICKNODE_API_URL = *PROVIDE_QUICKNODE_API*
-```
 <br>
 
-# Tech-Used👨‍💻
+# Tech Stack Used👨‍💻
 
 ## ThirdWeb SDK
 Visit https://thirdweb.com to know more.
 
-## React
+### Reactjs
 Refer to https://react.dev/ install React
 
-## TailwindCSS
+### TailwindCSS
 Refer to TailwindCSS [docs](https://tailwindcss.com/)
 
-## Vercel
-Refer to https://vercel.com
+### NodeJS
+A Javascript runtime environment that executes Javascript code outside a web browser.
+
+### Polygon
+Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. It is a scaling solution for Ethereum that allows developers to quickly and easily build and deploy Ethereum-compatible blockchain networks tailored to the needs of their decentralized applications (dApps) and users.
+
+### ExpressJs
+Express.js, or simply Express, is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.
+
+### Metamask
+Metamask is a browser extension that allows users to interact with the Ethereum blockchain. It allows users to connect to the Ethereum network and interact with smart contracts.
+
+### IPFS
+IPFS is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open. It is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects.
+<br> 
+
+# Prerequisites 👨‍💻
+
+### Install Node JS
+Refer to https://nodejs.org/en/ to install nodejs
+
+### Install Create-React-App
+Install create-react-app npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app globally.
+
+```bash
+npm install -g create-react-app
+```
+
+### Learn Tailwind CSS
+This project uses `Tailwind CSS` for styling. Refer to https://tailwindcss.com/ to learn more about Tailwind CSS.
 
 
+## Live WebSite URL
+
+The WebSite is deployed in https://campus-crate.vercel.app/
+
+Click on the link to see the website.
+
+## Cloning and Running the Application in local
+
+Clone the project into local.
+
+Install all the npm packages. Go into the root folder in each folder client and server and type the following command to install all npm packages
+
+```bash
+npm install
+```
+
+In order to run the application Type the following command in the `client` folder of the project
+
+```bash
+npm run start
+```
+
+And Type the following command in the `server` folder of the project
+
+```bash
+npm run dev
+```
+
+Also you need to add .env file in `server` folder:
+
+Its format looks like:
+
+```
+PRIVATE_KEY=<YOUR WALLET PRIVATE KEY>
+WALLET_ADDRESS=<YOUR WALLET ADDRESS>
+QUICKNODE_API_URL=<YOUR RPC URL>
+```
+
+The Client Runs on [http://localhost:3000/](http://localhost:3000/)<br>
+The Server Runs on [http://localhost:4000/](http://localhost:4000/)
 <br> 
 <br>
 
