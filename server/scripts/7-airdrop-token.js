@@ -1,4 +1,4 @@
-import sdk from "./1-initialize-sdk.js";
+const sdk = require("./1-initialize-sdk.js");
 
 const Airdrop = async () => {
   try {
@@ -41,4 +41,4 @@ const Airdrop = async () => {
   }
 };
 
-export default Airdrop;
+module.exports = Airdrop;

@@ -1,8 +1,7 @@
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
+var ThirdwebSDK = require("@thirdweb-dev/sdk").ThirdwebSDK;
 
 // Importing and configuring our .env file that we use to securely store our environment variables
-import dotenv from "dotenv";
-dotenv.config();
+require("dotenv").config();
 
 // Some quick checks to make sure our .env is working.
 if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY === "") {
@@ -35,4 +34,4 @@ const sdk = ThirdwebSDK.fromPrivateKey(
 })();
 
 // We are exporting the initialized thirdweb SDK so that we can use it in our other scripts
-export default sdk;
+module.exports = sdk;

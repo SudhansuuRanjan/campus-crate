@@ -1,4 +1,4 @@
-import sdk from "./1-initialize-sdk.js";
+const sdk = require("./1-initialize-sdk.js");
 
 const deployVote = async () => {
   try {
@@ -43,4 +43,4 @@ const deployVote = async () => {
   }
 };
 
-export default deployVote;
+module.exports = deployVote;

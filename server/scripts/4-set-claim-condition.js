@@ -1,7 +1,6 @@
 // File name -  4-set-claim-condition.js
-
-import sdk from "./1-initialize-sdk.js";
-import { MaxUint256 } from "@ethersproject/constants";
+const sdk = require("./1-initialize-sdk.js");
+const { MaxUint256 } = require("@ethersproject/constants");
 
 const claimConditions = async (address) => {
     try {
@@ -29,4 +28,4 @@ const claimConditions = async (address) => {
     }
 }
 
-export default claimConditions;
+module.exports = claimConditions;

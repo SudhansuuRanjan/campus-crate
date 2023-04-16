@@ -1,7 +1,6 @@
 // 3 - config-nft.js
-import sdk from "./1-initialize-sdk.js";
-import { readFileSync } from "fs";
-
+const sdk =  require("./1-initialize-sdk.js");
+const { readFileSync } = require("fs");
 
 const deployNFT = async (address) => {
     try {
@@ -19,4 +18,4 @@ const deployNFT = async (address) => {
     }
 };
 
-export default deployNFT;
+module.exports = deployNFT;
