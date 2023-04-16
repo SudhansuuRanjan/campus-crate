@@ -1,17 +1,17 @@
-const port = process.env.PORT || 4000;
-import dotenv from 'dotenv';
-dotenv.config();
-import express from 'express';
-import cors from 'cors';
-import deployNFTMetadata from './scripts/2-deploy-drop.js';
-import deployNFT from './scripts/3-config-nft.js';
-import claimConditions from './scripts/4-set-claim-condition.js';
-import deployToken from './scripts/5-deploy-token.js';
-import generateMoney from './scripts/6-print-money.js';
-import Airdrop from './scripts/7-airdrop-token.js';
-import deployVote from './scripts/8-deploy-vote.js';
-import setUpVote from './scripts/9-setup-vote.js';
-import createVoteProposal from './scripts/10-create-vote-proposals.js';
+require("dotenv").config();
+var port = process.env.PORT || 4000;
+var express = require('express');
+var cors = require('cors');
+var deployNFTMetadata = require('./scripts/2-deploy-drop.js');
+var deployNFT = require('./scripts/3-config-nft.js');
+var claimConditions = require('./scripts/4-set-claim-condition.js');
+var deployToken = require('./scripts/5-deploy-token.js');
+var generateMoney = require('./scripts/6-print-money.js');
+var Airdrop = require('./scripts/7-airdrop-token.js');
+var deployVote = require('./scripts/8-deploy-vote.js');
+var setUpVote = require('./scripts/9-setup-vote.js');
+var createVoteProposal = require('./scripts/10-create-vote-proposals.js');
+
 
 const app = express();
 app.use(express.json());
@@ -87,4 +87,4 @@ app.listen(port, () => {
     console.log(`Server running on port ${port} 🚀 : http://localhost:${port}`);
 });
 
-export default app;
+module.exports = app;

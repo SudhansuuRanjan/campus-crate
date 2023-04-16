@@ -1,5 +1,5 @@
-import { AddressZero } from "@ethersproject/constants";
-import sdk from "./1-initialize-sdk.js";
+const sdk =  require("./1-initialize-sdk.js");
+const {AddressZero} = require("@ethersproject/constants");
 
 
 const deployToken =  async () => {
@@ -28,4 +28,4 @@ const deployToken =  async () => {
     }
 };
 
-export default deployToken;
+module.exports = deployToken;

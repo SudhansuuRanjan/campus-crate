@@ -1,4 +1,4 @@
-import sdk from "./1-initialize-sdk.js";
+const sdk = require("./1-initialize-sdk.js");
 
 const setUpVote = async (address) => {
   try {
@@ -46,4 +46,4 @@ const setUpVote = async (address) => {
   }
 };
 
-export default setUpVote;
+module.exports = setUpVote;

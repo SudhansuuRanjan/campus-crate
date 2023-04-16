@@ -1,4 +1,4 @@
-import sdk from "./1-initialize-sdk.js";
+const sdk = require("./1-initialize-sdk.js");
 
 const generateMoney = async (address) => {
   try {
@@ -17,4 +17,4 @@ const generateMoney = async (address) => {
   }
 };
 
-export default generateMoney;
+module.exports = generateMoney;

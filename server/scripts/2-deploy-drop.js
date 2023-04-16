@@ -1,6 +1,8 @@
-import { AddressZero } from "@ethersproject/constants";
-import sdk from "./1-initialize-sdk.js";
-import { readFileSync } from "fs";
+const { AddressZero } = require("@ethersproject/constants");
+const sdk =  require("./1-initialize-sdk.js");
+const { readFileSync } = require("fs");
+
+
 
 const deployNFTMetadata = async () => {
     try {
@@ -36,4 +38,4 @@ const deployNFTMetadata = async () => {
     return null;
 };
 
-export default deployNFTMetadata;
+module.exports = deployNFTMetadata;

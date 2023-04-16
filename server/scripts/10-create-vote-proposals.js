@@ -1,5 +1,5 @@
-import sdk from "./1-initialize-sdk.js";
-import { ethers } from "ethers";
+const sdk = require("./1-initialize-sdk.js");
+const { ethers } =  require("ethers");
 
 const createVoteProposal = async () => {
 
@@ -79,4 +79,4 @@ const createVoteProposal = async () => {
 
 };
 
-export default createVoteProposal;
+module.exports = createVoteProposal;
