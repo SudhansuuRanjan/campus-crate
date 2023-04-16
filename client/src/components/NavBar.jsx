@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ConnectWallet } from "@thirdweb-dev/react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FiX } from "react-icons/fi";
-import {ImCross} from 'react-icons/im'
+import { ImCross } from 'react-icons/im'
 
 const NavBar = () => {
   const [menu, setMenu] = useState(false);
@@ -12,7 +12,7 @@ const NavBar = () => {
     <>
       <div className={`fixed bg-black h-[100%] w-full top-0 bottom-0 z-[100] transition-all delay-150 lg:hidden ease-in  ${!menu ? 'left-[-100%]' : 'left-0'} `}>
         <button className='absolute right-7 top-7 cursor-pointer hover:text-purple-500' onClick={() => setMenu(false)}>
-          <ImCross size={30}/>
+          <ImCross size={30} />
         </button>
 
         <div className='flex gap-[4rem] flex-col items-center justify-center h-[100%]'>
@@ -23,13 +23,13 @@ const NavBar = () => {
             <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">About</p></Link>
           </div>
           <div>
-            <Link to="/dashboard"><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Dashboard</p></Link>
+            <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Working</p></Link>
           </div>
           <div>
-            <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Home</p></Link>
+            <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Features</p></Link>
           </div>
           <div>
-            <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Home</p></Link>
+            <Link><p className="font-bold text-3xl hover:text-purple-500 hover:underline">Contact</p></Link>
           </div>
         </div>
       </div>

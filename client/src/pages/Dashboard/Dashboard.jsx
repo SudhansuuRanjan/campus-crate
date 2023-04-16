@@ -1,10 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useAddress, useContract, useNFTBalance } from '@thirdweb-dev/react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Dashboard = () => {
   const address = useAddress();
-  console.log("👋 Address:", address);
+  const navigate = useNavigate();
+  // console.log("👋 Address:", address);
 
 
   const editionDropAddress = "0xEd86a7F9F1F06b597849E9e2807F588bccCd75eB"
@@ -27,6 +29,10 @@ const Dashboard = () => {
   const shortenAddress = (str) => {
     return str.substring(0, 6) + '...' + str.substring(str.length - 4);
   };
+
+  if (!hasClaimedNFT) {
+    navigate("/");
+  }
 
 
   useEffect(() => {
@@ -78,18 +84,17 @@ const Dashboard = () => {
   }, [memberAddresses, memberTokenAmounts]);
 
 
-
-
-
-  return (
+  return !hasClaimedNFT ? <div className='m-auto flex flex-col items-center justify-center gap-16 p-5'>
+    <p>You don't have access to this page. Claim Membership NFT to become a member.</p>
+  </div> : (
     <div className='m-auto flex flex-col items-center justify-center gap-16 p-5'>
       <div className='text-center flex gap-2 flex-col'>
         <h1 className='text-purple-500 font-bold text-6xl'>CampusCrate DAO</h1>
         <p className='text-gray-500 font-light text-2xl'>Welcome to the CampusCrate DAO</p>
-        <p className='text-purple-600 text-2xl '>Congratulations on being a member!</p>
+        <p className='text-pink-600 text-2xl '>Congratulations on being a member!</p>
       </div>
       <div className='items-center flex justify-center flex-col gap-5'>
-        <h1 className='text-pink-500 font-bold text-2xl'>Members List</h1>
+        <h1 className='text-purple-500 font-bold text-2xl'>Members List</h1>
         <div className='mt-4 rounded-2xl overflow-hidden border border-gray-500'>
           <table className='table-auto'>
             <thead>
@@ -101,7 +106,7 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {memberList.length === 0 ? <p className='my-16'>Loading... </p> : memberList.map((member, index) => {
+              {memberList.length === 0 ? <div className='my-16 text-center w-full'>Loading...</div> : memberList.map((member, index) => {
                 return (
                   <tr key={index}>
                     <td className='px-5 py-3'>{shortenAddress(member.address)}</td>
