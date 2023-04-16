@@ -1,23 +1,135 @@
 <div align="center">
-    <img src="/CampusCrate.png">
+    <img src="./CampusCrate.png">
 </div>
 <p align='center'>A <strong>Decentralised</strong> solution for college projects to get grants from Ecosystem.</p>
-<h1><a href="www.google.com"> CampusCrate </a></h1>
+<h1><a href="https://campus-crate.vercel.app/"> CampusCrate </a> ⛓</h1>
 
-// website 
+![website](https://user-images.githubusercontent.com/90385824/232301876-bb6633df-41e3-4a18-ac69-82307c20268c.png)
+<p align='center' font-size='5px' ><font size='1px'>Home Page</font></p>
+
+![votin page](https://user-images.githubusercontent.com/90385824/232307287-3f542854-3bfb-42a0-9c2b-e02922e9cda8.png)
+<p align='center' font-size='5px' ><font size='1px'>Voting Page</font></p>
 
 DAO functionalities:
 
-* A two-tier DAO for Ecosystem projects.
-* Top tier for ecosystem verifiers and club leaders.
-* Second level DAO for college/university clubs to develop projects.
+* A two-tier DAO for incubating and accelerating ecosystem projects.
+* Top tier consists of CampusCrate DAO that is accessible for ecosystem verifiers and club leaders.
+* Bottom level DAO for college/university clubs to develop projects(personalized for every university with limited functionality).
 * NFTs for members and leaders with DAO tokens for voting proposals.
+* Club leader can propose new proposals and vote on proposals, as well as secure funding for their respective Blockchain club
 
-## Tech-Used
-### <a href="https://thirdweb.com/"> ThirdWeb </a>
+<br>
+<h2 align='center'> This is project is using <em><strong>Filecoin / IPFS</strong></em> for NFT storage </h2>
+<div align='center'>
 
-### <a href="https://react.dev/"> React </a>
+![download](https://user-images.githubusercontent.com/90385824/232304334-6a261296-d342-439f-8455-cb5ea2a8b17d.png)
+</div>
+We have used Filecoin for storing our CampusCrate membership NFTs.
+<br>
+<br>
+
+# Problem we trying to Solve 🤔
+
+* Student entrepreneurship in the web3 space faces significant challenges.
+* Many students abandon their web3 projects after hackathons due to a lack of guidance, vision, and funding.
+* The lack of proper web3 student infrastructure is a key factor in preventing projects from gaining traction and recognition.
+
+<br>
+
+# Solution we Gave 😎
+
+1. Introducing an innovative solution to expedite student projects :-      
+    A Decentralized Autonomous Organisation (DAO) specifically designed for university Blockchain clubs. Our approach comprises a two-tier structure of DAOs, starting with individual University Blockchain clubs that discover and nominate promising projects on campus, with voting conducted by club members
+
+2. The second tier involves the collaboration of these university DAOs, where each Club Leader can propose guidance and funding for projects. Every club leader has the power to cast their vote on proposals, making this a truly democratic and inclusive platform.
+
+<br>
+
+# Our Platform
+
+![website](https://user-images.githubusercontent.com/90385824/232301876-bb6633df-41e3-4a18-ac69-82307c20268c.png)
+
+<br>
+
+# Implementation
+
+## ERC1155 Contract for membership NFTs
+We have used ERC1155 contract to deploy NFTs of <em> CampusCrate DAO </em> membership.<br>
+Deployed Address:
+```
+https://mumbai.polygonscan.com/address/0x12C381A9b06EDeB5a03Be718bbBCF6a1dB306f8a
+```
+
+## ERC20 contract
+We have deployed <em> CampusCrate Goveranance Token</em> which is a ERC20 token.<br>
+Deployed Address:
+```
+https://mumbai.polygonscan.com/address/0xbf9a9f4ff3da3ea6b17c59b04332edd89b072c0c
+```
+## Voting contract
+A voting cortract has been deployed on Polygon to give votting access to CampusCrate DAO members.<br>
+Deployed Address:
+```
+https://mumbai.polygonscan.com/address/0xc8A95Bc1dF176777F52C1F0cD3d7dd93206CEed8
+```
+
+## DAO Treasury
+We have a DAO treasury account which holds over 90% of CampusCrate tokens, with no single entity claiming ownership or control of account.
+
+<br>
+
+# How it works👷‍♂️
+It divided in two part:<strong> Server and client </strong>  
+## Server
+It consists of following scripts:<br>
+1. <strong>Initialize-sdk.js</strong> : It initialize the thirdWeb SDks.
+2. <strong>deploy-drop.js</strong> : This scripts is used for metadata creation of CampusCrate membership NFTs. 
+3. <strong>config-nft.js</strong> : Used for deployment of NFTs to the <em>Mumbai Testnet</em>
+4. <strong>set-claim-condition.js</strong> : This script is used for claiming the NFT for membership of DAO. 
+5. <strong>deploy-token.js</strong> : This script is used for deployment of <em>CampusCrate Governance token</em> {CCT} to <strong> AddressZero</strong>
+6. <strong>print-money.js</strong> : Used for amoumt to token to be minted for the DAO. For now we have minted <u>1,000,000</u> CCT tokens.
+7. <strong>airdrop.js</strong> : With the help of this script, we transfer tokens to new joined members for voting to thier accounts.
+8. <strong>setup-vote.js</strong> : This script is used for giving voting access to DAO members only. 
+9. <strong>create-vote-proposal.js</strong> : With the help of this file, members are given access to create proposals.
+
+## Setup .env
+Provide the given variables in <em>.env</em> file.
+```
+PRIVATE_KEY = *REPLACE_WITH_YOUR_PRIVATE_KEY*
+WALLET_ADDRESS = *REPLACE_YOUR_WALLET_ADDRESS*
+QUICKNODE_API_URL = *PROVIDE_QUICKNODE_API*
+```
+<br>
+
+# Tech-Used👨‍💻
+
+### ThirdWeb SDK
+Visit https://thirdweb.com to know more.
+### React
 Refer to https://react.dev/ install React
-### <a href="https://tailwindcss.com/"> TailwindCSS </a>
-Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
+### TailwindCSS
+Refer to TailwindCSS [docs](https://tailwindcss.com/)
+<br> 
+<br>
+## Visit us 🙌: https://campus-crate.vercel.app/
+<br> 
+<br>
+
+## Contributors ✨
+
+Team of <em> CampusCrate </em> 💕:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<div align='center'>
+<a href = "https://github.com/SudhansuuRanjan/campus-crate/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=SudhansuuRanjan/campus-crate"/>
+</a>
+</div>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
