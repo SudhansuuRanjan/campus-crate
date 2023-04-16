@@ -25,7 +25,7 @@ const Header = () => {
 
   const airdrop = async () => {
     try {
-      const response = await axios.post("http://localhost:4000/api/airdrop");
+      const response = await axios.post("https://campus-crate-production.up.railway.app/api/airdrop");
       console.log(response);
     } catch (error) {
       console.log(error);
