@@ -87,10 +87,12 @@ const Header = () => {
                   contract.erc1155.claim(0, 1);
                 }}
                 onSuccess={async () => {
+                  setAirDropping(true);
                   await airdrop();
                   console.log(
                     `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`
                   );
+                  setAirDropping(false);
                 }}
                 onError={(error) => {
                   console.error("Failed to mint NFT", error);
