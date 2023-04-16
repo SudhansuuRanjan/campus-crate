@@ -93,10 +93,11 @@ It consists of following scripts:<br>
 9. <strong>create-vote-proposal.js</strong> : With the help of this file, members are given access to create proposals.
 
 <br>
+ 
 
 # Tech Stack Used👨‍💻
 
-### ThirdWeb SDK
+## ThirdWeb SDK
 Visit https://thirdweb.com to know more.
 
 ### Reactjs
@@ -180,7 +181,22 @@ The Server Runs on [http://localhost:4000/](http://localhost:4000/)
 <br> 
 <br>
 
-## Contributors ✨
+## Links 🙌:
+ * website : https://campus-crate.vercel.app/
+ * Youtube : https://youtu.be/lsd5nwyz0uc
+ * Screen Recording : https://app.flonnect.com/view/video/harshktiwary07/Flonnect_2023-04-16_81866baf-3eb9-4fae-81f4-f5d9d40ebaf9 
+
+<br> 
+
+# Challenges Faced🤯
+1. Our team faced a major challenge while attempting to deploy our project on the Filecoin Hyperspace testnet. We encountered an issue with the RPC (Remote Procedure Call) URL, which prevented us from completing the deployment process.
+
+2. We also encountered a challenge with routing while trying to deploy our backend on <strong>Vercel</strong>. Despite trying various solutions, we were unable to resolve the issue. In order to continue with the project, we decided to switch to <strong>Railway</strong> for deployment. 
+
+
+<br>
+
+# Contributors ✨
 
 Team of <em> CampusCrate </em> 💕:
 
